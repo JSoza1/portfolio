@@ -1,0 +1,148 @@
+/* Contenedor principal que ocupa toda la pantalla y centra el círculo */
+.habilidades-container {
+    width: 100%;
+    height: 100vh;        /* Altura completa de la ventana */
+    display: flex;        /* Usa flexbox para centrado */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del círculo con tamaño responsive */
+.habilidades-wrapper {
+    position: relative;    /* Para posicionar elementos hijos absolutamente */
+    width: 80vw;          /* Ancho responsive (80% del ancho de ventana) */
+    height: 80vw;         /* Altura igual al ancho para mantener círculo perfecto */
+    max-width: 550px;     /* Límite de tamaño en pantallas grandes */
+    max-height: 550px;    /* Límite de tamaño en pantallas grandes */
+    display: flex;        /* Para centrar contenido interno */
+    justify-content: center;
+    align-items: center;
+}
+
+/* El círculo con gradiente y efecto de desenfoque */
+.habilidades-circulo {
+    width: 100%;          /* Ocupa todo el contenedor wrapper */
+    height: 100%;
+    border-radius: 50%;   /* Forma circular */
+    background: radial-gradient(circle, white 0%, #A1F7A1 40%, #59be80 75%, #F9FAF9 100%); /* Gradiente radial verde */
+    filter: blur(8px);    /* Efecto de desenfoque */
+    animation: pulso 6s infinite alternate; /* Animación de pulsación */
+    z-index: 1;           /* Capa base */
+}
+
+/* modo oscuro */
+
+.dark-mode .habilidades-circulo {
+    background: radial-gradient(circle, rgb(0, 0, 0) 0%, #69017e 40%, #220135 75%, #000000 100%);
+    animation: pulso-dark 6s infinite alternate; /* Animación de pulsación */
+}
+
+
+/* Capas adicionales para el efecto de ondas circulares */
+.habilidades-circulo::before, .habilidades-circulo::after {
+    content: "";          /* Necesario para pseudo-elementos */
+    position: absolute;   /* Posicionado absolutamente */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(46,133,79,0.5) 70%, transparent 100%); /* Gradiente para ondas */
+    animation: ondas 4s infinite linear; /* Animación de ondas expandiéndose */
+    filter: blur(10px);   /* Desenfoque para efecto suave */
+}
+
+/* modo oscuro */
+
+/* Estilo específico para modo oscuro - importante poner 2 veces el dark-mode en esta situacion */
+.dark-mode .habilidades-circulo::before, 
+.dark-mode .habilidades-circulo::after {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, #8E05C2 70%, transparent 100%);
+}
+
+/* Segunda capa de ondas con retraso de animación para efecto escalonado */
+.habilidades-circulo::after { 
+    animation-delay: -2s; /* Delay para que las ondas no estén sincronizadas */
+}
+
+/* Contenedor para el texto (título y habilidades) */
+.contenido-habilidades {
+    position: absolute;    /* Posicionado encima del círculo */
+    width: 90%;           /* Ligeramente más pequeño que el círculo */
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;           /* Por encima del círculo */
+}
+
+/* Estilo para el título central "Habilidades Técnicas" */
+.titulo-central {
+    font-size: calc(14px + 1.2vw); /* Tamaño de fuente responsive */
+    font-weight: bold;
+    color: #062e01;          /* Texto blanco */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dark-mode .titulo-central {
+    color: rgb(230, 167, 255);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra para mejor legibilidad */
+}
+
+/* Contenedor para los items de habilidades */
+.habilidades-items {
+    width: 100%;
+    height: 100%;
+    position: absolute;   /* Posicionamiento absoluto para colocar las habilidades */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo base para cada ítem de habilidad */
+.habilidad-item {
+    position: absolute;   /* Cada habilidad se posiciona independientemente */
+    color: rgb(1, 63, 6);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Sombra para legibilidad */
+    font-size: calc(10px + 0.6vw); /* Tamaño responsive */
+    white-space: nowrap;  /* Evita que el texto se rompa en líneas */
+    transform-origin: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.dark-mode .habilidad-item {
+    color: rgb(230, 167, 255);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra para legibilidad */
+}
+
+/* Posicionamiento específico para cada habilidad */
+.habilidad-item:nth-child(1) { transform: translateY(-30%) rotate(0deg); top: 15%; } /* Desarrollo Web - posición superior */
+.habilidad-item:nth-child(2) { transform: translateX(38%) rotate(0deg); right: 6%; } /* Programación - posición derecha */
+.habilidad-item:nth-child(3) { transform: translateY(30%) rotate(0deg); bottom: 15%; } /* Bases de Datos - posición inferior */
+.habilidad-item:nth-child(4) { transform: translateX(-38%) rotate(0deg); left: 6%; } /* Frontend - posición izquierda */
+.habilidad-item:nth-child(5) { transform: translate(25%, -25%) rotate(0deg); top: 25%; right: 10%; } /* Backend - diagonal superior derecha */
+.habilidad-item:nth-child(6) { transform: translate(25%, 25%) rotate(0deg); bottom: 25%; right: 10%; } /* UX/UI - diagonal inferior derecha */
+.habilidad-item:nth-child(7) { transform: translate(-25%, 25%) rotate(0deg); bottom: 25%; left: 10%; } /* Mobile - diagonal inferior izquierda */
+.habilidad-item:nth-child(8) { transform: translate(-25%, -25%) rotate(0deg); top: 25%; left: 10%; } /* DevOps - diagonal superior izquierda */
+
+/* Animación de pulso para el círculo */
+@keyframes pulso {
+    0%, 100% { filter: blur(8px); box-shadow: 0 0 60px 20px rgba(46, 133, 79, 0.4); } /* Estado inicial y final */
+    50% { filter: blur(12px); box-shadow: 0 0 80px 30px rgba(46, 133, 79, 0.5); } /* Estado medio con más brillo */
+}
+
+@keyframes pulso-dark {
+    0%, 100% { filter: blur(8px); box-shadow: 0 0 60px 20px #3E065F; } /* Estado inicial y final */
+    50% { filter: blur(12px); box-shadow: 0 0 80px 30px #700B97; } /* Estado medio con más brillo */
+}
+
+/* Animación de ondas expandiéndose */
+@keyframes ondas {
+    0% { opacity: 0.8; transform: scale(0.4); } /* Comienza pequeño y visible */
+    100% { opacity: 0; transform: scale(1); } /* Termina expandido y desapareciendo */
+}

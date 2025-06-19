@@ -1,0 +1,155 @@
+/* ============= ESTILOS GLOBALES ============= */
+body {          
+  margin: 0;          
+  padding: 0;          
+  min-height: 100vh;          
+  background-color: #F9FAF9;          
+  color: black;          
+  font-family: Arial;          
+  overflow-x: hidden;          
+  position: relative;          
+  transition: background-color 1.5s, color 1.5s;  
+}    
+
+/* Contenedor principal */  
+.content {           
+  position: relative;          
+  z-index: 2;  
+}    
+
+/* Capa de oscurecimiento */  
+.dark-overlay {          
+  position: fixed;          
+  top: 0;          
+  left: -100%;          
+  width: 100%;          
+  height: 100%;          
+  background-color: #000000;          
+  transition: left 0.5s linear;     
+  z-index: 1;
+}    
+
+
+/* ============= SISTEMA DE TEXTO ============= */
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.space-word {
+  display: inline-block;
+  width: 0.3em;
+}
+
+/* Estilos para caracteres */  
+.char {
+  display: inline-block;
+  transition: color 0.3s;
+  margin-right: 0.01em;
+  position: relative;
+}
+
+.char:last-child {
+  margin-right: 0;
+}
+
+/* Espaciado para espacios entre palabras */  
+.char.space {          
+  margin-right: 0.3em;  
+}    
+
+/* ============= SISTEMA DE IMÁGENES ============= */
+/* Contenedor de imágenes */  
+.image-container {          
+  position: relative;          
+  display: inline-block;          
+  width: 100%;          
+  max-width: 600px;          
+  margin: 20px 0;     
+  z-index: 2;
+}    
+
+/* Hacer que el contenedor tenga una altura mínima */  
+.image-container::after {        
+  content: "";        
+  display: block;        
+  /* padding-bottom: 56.25%;    ----------------  Proporción 16:9   */
+}
+
+/* Imágenes base */  
+.light-image, .dark-image {          
+  position:absolute;          
+  top: 0;          
+  left: 0;          
+  width: 100%;          
+  height: auto;          
+  transition: none; /* Controlado por JS */ 
+}    
+
+/* Visibilidad inicial */  
+.light-image { opacity: 1; }  
+
+.dark-image { opacity: 0; }     
+
+/* ============= SISTEMA DE BOTONES ============= */
+/* Botón de cambio de modo */  
+button {          
+  padding: 12px 24px;          
+  font-size: 16px;          
+  border: none;          
+  border-radius: 5px;          
+  cursor: pointer;          
+  background-color: #4CAF50;          
+  color: white;          
+  transition: background-color 0.3s;  
+}    
+
+/* Estilos para el botón especial */
+.special-button {
+  font-size: 18px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #000000;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: border-color 1.5s;
+}
+
+.special-button:hover {
+  transform: scale(1.08);
+}
+
+.special-button .light-bg {
+  background-color: #3ebe70;
+}
+
+/* Estilo para el botón especial en modo oscuro */
+.special-button.dark {
+  border-color: #700B97;
+}
+
+.special-button .dark-bg { 
+  background-color: #292828;
+  opacity: 0; 
+}
+
+/* Contenedor para las letras del botón */
+.special-button .button-text {
+  position: relative;
+  z-index: 3;
+}
+
+/* Fondos del botón */
+.special-button .light-bg,
+.special-button .dark-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: none; /* Controlado por JS */
+}
+

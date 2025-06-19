@@ -1,0 +1,778 @@
+/*============= Apartado de css globales ==============*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+font-family: Roboto, Arial, Helvetica, sans-serif
+}
+
+
+.texto1 {
+    text-align: justify; /* Para justificar el texto */
+    margin: 0%; /* Eliminar márgenes si no son necesarios */
+    line-height: 1.6; /* Opcional: mejorar la legibilidad del texto */
+    align-items: stretch;
+    font-family: Roboto, Arial, Helvetica, sans-serif
+  }
+
+
+section {
+    padding: 20px;
+}
+
+.contenedoresDeSecciones {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/* Estilo normal para las listas */
+ul {
+    color: black; /* Color de los bullets en modo claro */
+    transition: color 3.5s;
+  }
+  
+/* Estilo para las listas en modo oscuro */
+.dark-mode ul {
+    color: white; /* Color de los bullets en modo oscuro */
+    transition: color 0.5s;
+  }
+
+html {
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave en toda la pagina */
+}
+ 
+/*===============fin apartado de css globales================*/
+
+/*=========================Apartado de Header================*/
+header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+nav {
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+/* Estilo inicial de los enlaces */
+.enlacesNav {
+    text-decoration: none;
+    color: rgb(0, 0, 0); 
+    text-shadow: 4px 4px 8px rgb(0, 53, 3); /* Sombra negra fuerte */
+    transition: color 1s;
+}
+
+/* Mantener el color inicial después de visitar el enlace */
+.enlacesNav:visited {
+    color:rgb(0, 0, 0) /* Igual al color inicial */
+}
+
+/* Cambio de color al pasar el puntero - IMPORTANTE EL ORDEN, DEBE ESTAR ULTIMO PARA QUE FUNCIONE */
+.enlacesNav:hover {
+    color: rgb(2, 161, 13);
+    transform: scale(1.2); /* Escala el texto a un 120%, sin alterar el contenedor*/
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+.dark-mode a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* Texto blanco */
+    text-shadow: 4px 4px 8px rgb(195, 0, 255); /* Sombra negra fuerte */
+}
+
+.dark-mode a:visited {
+    color:rgb(255, 255, 255) /* Igual al color inicial */
+}
+
+.dark-mode a:hover {
+    color: rgb(212, 0, 255);
+}
+
+/*=========================Fin apartado de Header================*/
+
+/*======================== Apartado Foto =======================*/
+
+.flex-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
+  height: 50vh;
+ 
+}
+
+.foto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%; /* usa todo el alto disponible del flex-container */
+  overflow: hidden; /* evita que el contenido se desborde visualmente */
+}
+
+#foto {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.saludoBotones-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.botones-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px; /* Leve separación entre logos */
+}
+
+.conteneLogo {
+    width: auto; /* Evita que ocupe toda la fila */
+}
+
+.conteneLogo a{
+    display: block;
+    justify-content: flex-end;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.conteneLogo a img{
+    width: 32px; /* o el tamaño que quieras */
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Solo aplicado a las letras del saludo */
+#saludoPrincial .char.effect {
+  position: relative;
+  color: inherit; /* Deja que JS controle el color base */
+  animation: neon-flicker 2s infinite alternate;
+  font-size: 25px;
+}
+
+/* Efecto tipo parpadeo con tonos verdes y violetas */
+@keyframes neon-flicker {
+  0% {
+    text-shadow:
+      0 0 3px #00ff99,
+      0 0 5px #00ff99,
+      0 0 8px #9900ff;
+  }
+  100% {
+    text-shadow:
+      0 0 5px #9900ff,
+      0 0 10px #00ff99,
+      0 0 12px #9900ff;
+  }
+}
+
+
+
+/*======================== Fin Apartado Foto ====================*/
+
+/*=============== Apartado de bolitas en movimiento ===============*/
+
+.contenedorBolitas {
+    position: relative;
+    overflow: hidden; /* Oculta cualquier elemento que se salga */
+
+}
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(30px);
+    z-index: -1;
+    }
+      
+.blob:nth-child(1) {
+    width: 450px;
+    height: 450px;
+    background-color: #A1F7A1;
+    top: 20%;
+    left: 20%;
+    animation: float1 14s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.blob:nth-child(2) {
+    width: 280px;
+    height: 280px;
+    background-color: #A1F7A1;
+    top: 50%;
+    left: 50%;
+    animation: float2 16s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.blob:nth-child(3) {
+    width: 380px;
+    height: 380px;
+    background-color: #A1F7A1;
+    top: 40%;
+    left: 30%;
+    animation: float3 18s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.blob:nth-child(4) {
+    width: 520px;
+    height: 520px;
+    background-color: #A1F7A1;
+    top: 30%;
+    left: 10%;
+    animation: float4 20s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.blob:nth-child(5) {
+    width: 300px;
+    height: 300px;
+    background-color: #A1F7A1;
+    top: 60%;
+    left: 40%;
+    animation: float5 15s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.blob:nth-child(6) {
+    width: 420px;
+    height: 420px;
+    background-color: #A1F7A1;
+    top: 10%;
+    left: 70%;
+    animation: float6 17s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+@keyframes float1 {
+    0% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(60%, -40%) scale(1.2); }
+    50% { transform: translate(10%, 70%) scale(0.8); }
+    75% { transform: translate(-70%, 20%) scale(1.1); }
+    100% { transform: translate(-30%, -60%) scale(0.9); }
+    }
+      
+@keyframes float2 {
+    0% { transform: translate(0, 0) scale(1); }
+    20% { transform: translate(-40%, -50%) scale(0.8); }
+    40% { transform: translate(50%, -80%) scale(1.3); }
+    60% { transform: translate(70%, 30%) scale(0.9); }
+    80% { transform: translate(10%, 60%) scale(1.1); }
+    100% { transform: translate(-60%, 20%) scale(1.2); }
+    }
+      
+@keyframes float3 {
+    0% { transform: translate(0, 0) scale(0.9); }
+    33% { transform: translate(70%, 30%) scale(1.2); }
+    66% { transform: translate(-60%, 40%) scale(0.8); }
+    100% { transform: translate(-20%, -70%) scale(1.1); }
+    }
+      
+@keyframes float4 {
+    0% { transform: translate(0, 0) scale(1); }
+    30% { transform: translate(40%, 40%) scale(0.7); }
+    60% { transform: translate(-30%, -60%) scale(1.1); }
+    100% { transform: translate(-50%, 30%) scale(0.9); }
+    }
+      
+@keyframes float5 {
+    0% { transform: translate(0, 0) scale(1.1); }
+    25% { transform: translate(-70%, 20%) scale(0.9); }
+    50% { transform: translate(0%, -60%) scale(1.2); }
+    75% { transform: translate(60%, -10%) scale(0.8); }
+    100% { transform: translate(40%, 70%) scale(1); }
+    }
+      
+@keyframes float6 {
+    0% { transform: translate(0, 0) scale(0.8); }
+    20% { transform: translate(-50%, -40%) scale(1.1); }
+    40% { transform: translate(-20%, 70%) scale(0.9); }
+    60% { transform: translate(60%, 40%) scale(1.2); }
+    80% { transform: translate(70%, -50%) scale(0.7); }
+    100% { transform: translate(10%, -70%) scale(1); }
+    }
+
+/* Bolitas dark-mode */
+
+.dark-mode .blob:nth-child(1) {
+    width: 450px;
+    height: 450px;
+    background-color: #700B97;
+    top: 20%;
+    left: 20%;
+    animation: float1 14s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.dark-mode .blob:nth-child(2) {
+    width: 280px;
+    height: 280px;
+    background-color: #700B97;
+    top: 50%;
+    left: 50%;
+    animation: float2 16s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.dark-mode .blob:nth-child(3) {
+    width: 380px;
+    height: 380px;
+    background-color: #700B97;
+    top: 40%;
+    left: 30%;
+    animation: float3 18s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.dark-mode .blob:nth-child(4) {
+    width: 520px;
+    height: 520px;
+    background-color: #700B97;
+    top: 30%;
+    left: 10%;
+    animation: float4 20s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.dark-mode .blob:nth-child(5) {
+    width: 300px;
+    height: 300px;
+    background-color: #700B97;
+    top: 60%;
+    left: 40%;
+    animation: float5 15s infinite alternate;
+    transition: background-color 1.5s;
+    }
+      
+.dark-mode .blob:nth-child(6) {
+    width: 420px;
+    height: 420px;
+    background-color: #700B97;
+    top: 10%;
+    left: 70%;
+    animation: float6 17s infinite alternate;
+    transition: background-color 1.5s;
+    }
+
+/*=================== Fin apartado de bolitas en movimiento ==================*/
+
+/*===================== Apartado de secciones oscuras y claras ==============*/
+
+.sectionOscura {
+    background-color: #A1F7A1;
+    background: linear-gradient(to bottom, #F9FAF9 0%, #A1F7A1 30%, #A1F7A1 70%, #F9FAF9 100%);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    transition: background-color 1.5s;
+}
+
+#section1 {
+    background-color: #A1F7A1;
+    background: linear-gradient(to bottom, #A1F7A1 0%, #A1F7A1 30%, #F9FAF9 70%, #F9FAF9 100%);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    transition: background-color 1.5s;
+}
+
+.dark-mode #section1 {
+    background: linear-gradient(to bottom, #000000 0%, #000000 30%, #000000 70%, #000000 100%);
+}
+
+.sectionClara {
+    background-color: #F9FAF9;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    transition: background-color 1.5s;
+}
+
+/*================== Estilos para las secciones cuando están en modo oscuro =============*/
+
+.dark-mode .sectionClara {
+    background: linear-gradient(to bottom, #000000 0%, #3E065F 30%, #3E065F 70%, #000000 100%);
+}
+
+.dark-mode .sectionOscura {
+    background: linear-gradient(to bottom, #000000 0%, #000000 30%, #000000 70%, #000000 100%);
+}
+
+/*================= Fin apartado de secciones oscuras y claras ====================*/
+
+/*================== Apartado de logos de tecnologias y herramientas =================*/
+
+.subContenedorLogos {
+        display: flex; /* Activa Flexbox */
+        flex-direction: column; /* Organiza los elementos en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        justify-content:space-between; /* Centra los elementos verticalmente */
+        flex-grow: 0; /* No permite que los elementos crezcan */
+        flex-shrink: 0; /* No permite que los elementos se encojan */
+        flex-basis: 8rem; /* Define el tamaño base de los elementos */
+        max-width: 8rem; /* Limita el ancho máximo */
+        height: 8rem; /* Define una altura fija */
+        text-align: center; /* Asegura que el texto dentro del contenedor esté centrado */
+        margin: 2%; /* Agrega un pequeño margen alrededor */
+        padding: 1%; /* Espacio interno dentro del contenedor */
+    }
+    
+.subContenedorLogos p {
+   height: 50%;
+   margin: 0%;
+}
+
+.subContenedorLogos img {
+  height: 50%;
+  max-width: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.subContenedorLogos:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 20px rgb(0, 255, 115);
+}
+
+.dark-mode .subContenedorLogos:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 20px rgba(255, 0, 255, 0.5);
+}
+
+.tituloLogos {
+    display: flex;
+    align-items: center;
+}
+
+/*=============== Fin Apartado de logos de tecnologias y herramientas =============*/
+
+/*======== Parte del apartado de habilidades (restante en otro archivo css) ================= */
+
+.contenedorGeneralHabilidades {
+    display: flex;
+}
+
+/*===================== Fin apartado de habilidades ====================*/
+
+
+
+/*============ Inicio apartado proyectos y certificaciones ===============*/
+
+.imagenesConZoom:hover {
+    transform: scale(1.2);
+}
+
+/* Construccion de nuevo css */
+
+article {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 5%;
+   margin-top: 1%;
+   margin-bottom: 1%;
+   padding: 0%;
+   padding-top: 1.5%;
+   padding-bottom: 1.5%;
+   padding-left: 4%;
+   padding-right: 4%;
+
+   /* Flex-grow, flex-shrink, flex-basis "resumido"*/
+   flex: 1 1 250px;
+   /* - - - - - - - - - - - - - - - - - - - - - - -*/
+
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 250px;
+   /* Para que no se estiren demasiado en pantallas grandes */
+   max-width: 300px;
+}
+
+article img {
+    width: 100%;
+}
+
+article b {
+    align-self: flex-start; /* Esto alinea el párrafo a la izquierda */
+    margin: 0%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+article ul {
+    align-self: flex-start; /* Esto alinea el párrafo a la izquierda */
+    margin: 0%;
+    padding: 0%;
+    padding-left: 6%;
+}
+
+article h3 {
+    padding: 0%;
+    margin: 0%;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro de figure */
+    justify-content: center;
+    text-align: center; /* Asegura que el texto dentro de figcaption esté centrado */
+    width: 100%;
+}
+
+
+/*============= Fin apartado proyectos y certificaciones =================*/
+
+/* ================ Inicio apartado de experiencia laboral =================== */
+dt {
+    font-weight: bold;
+}
+
+dl ul {
+    margin-left: 1.5%; /* Agrega sangría a las listas dentro del dl */
+}
+
+dl, ul {
+    line-height: 1.6; /* Opcional: mejorar la legibilidad del texto */
+}
+
+
+
+/* ================= Fin apartado de experiencia laboral ===================== */
+
+/*================== Apartado de boton Up ==================*/
+
+#btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Inicialmente oculto */
+    background-color: #2E854F;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 19px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    z-index: 3;
+}
+  
+#btn-up:hover {
+    background-color: #7E866C;
+}
+
+.dark-mode #btn-up {
+    background-color: #3E065F;
+}
+
+.dark-mode #btn-up:hover {
+    background-color: #8E05C2;
+}
+
+/*================ Fin apartado boton Up====================*/
+
+/*================ Apartado contacto =======================*/
+
+#contenedorContacto {
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 7%;
+    padding: 6%;
+    border-radius: 20px;
+    border: 2px solid #2E854F;
+    background-color: #89f589;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.dark-mode form {
+    border: 2px solid #700B97;
+    background-color: #131313;
+}
+
+#contenedorFormulario {
+    width: 70%; 
+}
+
+#contenedorDeInputsA {
+    display: flex;
+    gap: 5%;
+    margin-bottom: 2%;
+}
+
+.inputsA {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4vw;
+    width: 50%;
+}
+
+.tamañoInput {
+    height: 2vw;
+    font-size: medium;
+}
+
+#inputB {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4vw;
+    font-size: medium;
+}
+
+textarea {
+    font-size: 1.1rem;
+    resize: none; /* Evita que el usuario cambie el tamaño */
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    
+}
+
+#contenedorBotonForm {
+    display: flex;
+    justify-content: end;
+    margin-top: 4%;
+}
+
+#contenedorEmail {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+#contenedorEmail img {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+}
+
+
+
+
+/*================ Fin apartado contacto ===================*/
+
+
+
+
+/*============ Apartado footer =============*/
+
+#footerSuperior {
+    background-color: #3ebe70
+}
+
+#footerInferior {
+    background-color: #319758;
+}
+
+.dark-mode #footerSuperior {
+    background-color: #131313;
+}
+
+.dark-mode #footerInferior {
+    background-color: #292828;
+}
+
+#footerSuperior {
+    display: flex;
+    padding: 20px;
+  }
+
+#textoFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+#texto2 {
+    width: 83%;
+}
+
+#seccionesFooter {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 5px;
+  }
+
+/* Enlaces en modo claro */
+
+.enlaces1 {
+    text-decoration: none;
+}
+
+.enlaces1 {
+    color: rgb(0, 0, 0);
+    text-shadow: 4px 4px 8px rgb(0, 0, 0); /* Sombra negra fuerte */
+}
+
+.enlaces1:visited {
+    color: rgb(0, 0, 0);
+    text-shadow: 4px 4px 8px rgb(0, 0, 0); /* Sombra negra fuerte */
+}
+
+.enlaces1:hover {
+    color: rgb(251, 255, 0);
+    transform: scale(1); 
+}
+
+/* Enlaces en modo oscuro */
+
+.dark-mode .enlaces1 {
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .enlaces1:visited {
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .enlaces1:hover {
+    color: rgb(255, 0, 200);
+    transform: scale(1); 
+}
+
+#redesFooter {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content:space-evenly;
+  }
+
+#redesFooter img {
+    width: 40px;
+    height: 40px;
+}
+
+#footerInferior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#footerInferior p {
+    margin: 0.5%;
+    padding: 0.1%;
+  }
+
+.redesLogos:hover {
+    transform: scale(1.1);
+  }
+  
+.dark-mode .redesLogos:hover {
+    transform: scale(1.1);
+  }
+
+/*============ Fin apartado footer ==============*/

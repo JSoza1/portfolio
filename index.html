@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="pulso.css">
+</head>
+<body>
+    <div class="dark-overlay" id="darkOverlay"></div>
+    <div class="content">
+    <div class="contenedorBolitas">
+        <header>
+            <div>
+                <button class="special-button" onclick="toggleDarkMode()">&#9790 &#9788;</button>
+            </div>
+            <nav>
+                <a class="enlacesNav" href="#tecnologias">Tecnologias</a>
+                <a class="enlacesNav" href="#proyectos">Proyectos</a>
+                <a class="enlacesNav" href="#experiencia">Experiencia</a>
+                <a class="enlacesNav" href="#herramientas">Herramientas</a>
+                <a class="enlacesNav" href="#habilidades">Habilidades</a>
+                <a class="enlacesNav" href="#certificaciones">Certificaciones</a>
+                <a class="enlacesNav" href="#contacto">Contacto</a>
+            </nav>
+        </header>
+        <section>
+            <div class="flex-container">
+                <div class="foto-container">
+                    <img id="foto" src="img/1.png" alt="foto">
+                </div>
+                <div class="saludoBotones-container">   
+                    <div>
+                        <p id="saludoPrincial">¡Hola a todos! Soy Jonathan</p>
+                    </div>
+                    <div class="botones-container">
+                        <div class="conteneLogo">
+                            <a href="https://www.linkedin.com/in/jonathan-soza/" target="_blank">
+                                <img src="img\linkedin.png" alt="logito1redes">
+                            </a>
+                        </div>
+                        <div class="conteneLogo">
+                            <a href="https://github.com/JSoza1" target="_blank">
+                                <img src="img\githubredondo.png" alt="logito2redes">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+    <main>
+        <section class="sectionOscura" id="section1">
+            <h2>Sobre Mi</h2>
+            <div class="contenedoresDeSecciones">
+                <p class="texto1">
+                    Soy Desarrollador Web con experiencia en SEO y estudiante de la Tecnicatura Universitaria en Programación en la UTN. Me mantengo en constante aprendizaje de forma autodidacta, explorando nuevas tecnologías y metodologías de desarrollo. Además, cuento con experiencia como docente, lo cual ha fortalecido mis habilidades de comunicación, organización y trabajo en equipo.
+                </p>
+                <br>
+                <p class="texto1">
+                   Mi objetivo principal es integrarme a una empresa en la que pueda contribuir activamente con mis conocimientos, proponiendo soluciones creativas que generen impacto. Me motiva desarrollarme en un entorno dinámico y colaborativo, enfrentando desafíos que me impulsen a superarme día a día, tanto a nivel técnico como humano. Aspiro a crecer profesionalmente mientras aporto valor real al equipo y a los proyectos.
+                </p>
+            </div>
+        </section>
+        <section class="sectionClara" id="tecnologias">
+            <h2>Tecnologías</h2>
+            <div class="contenedoresDeSecciones">
+                <div class="subContenedorLogos">
+                    <p class="tituloLogos">HTML</p>   
+                    <img class="logos" src="img/html2.png" alt="logo">
+                </div>
+                <div class="subContenedorLogos">
+                    <p class="tituloLogos">CSS</p>
+                    <img class="logos" src="img/css2.png" alt="logo">
+                </div>
+                <div class="subContenedorLogos">
+                    <p class="tituloLogos">JavaScript</p>
+                    <img class="logos" src="img/js2.png" alt="logo">
+                </div>
+                <div class="subContenedorLogos">
+                    <p class="tituloLogos">WordPress</p>
+                    <img class="logos" src="img/xwordpress2.png" alt="logo">
+                </div>
+                <div class="subContenedorLogos">
+                    <p class="tituloLogos">Elementor</p>
+                    <img class="logos" src="img/xelementor.png" alt="logo">
+                </div>
+                <div class="subContenedorLogos">
+                    <p class="tituloLogos">Git</p>
+                    <img class="logos" src="img\xgit.png" alt="logo">
+                </div>
+            </div>
+        </section>
+        <section class="sectionOscura" id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="contenedoresDeSecciones">
+                <article>
+                    <h3>Restaurant Website</h3>
+                    <figure>
+                        <a href="https://valentinocr.netlify.app/" target="_blank">
+                        <img class="imagenesConZoom" src="img/valen4.png" alt="Proyecto">
+                        </a>
+                        <figcaption>Menú (solo version mobile)</figcaption>
+                    </figure>
+                    <b>Tecnologías</b>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Netlify</li>
+                    </ul>
+                </article>
+                <!-- Hosting caido momentaneamente -->
+                <!-- <article>
+                    <h3>Business Website</h3>
+                    <figure>
+                        <a href="https://comodin.rf.gd" target="_blank">
+                        <img class="imagenesConZoom" src="img\portfolio1.png" alt="Proyecto">
+                        </a>
+                        <figcaption>Sitio web empresarial de colchones</figcaption>
+                    </figure>
+                    <b>Tecnologías</b>
+                    <ul>
+                        <li>HTML</li>
+                        <li>WordPress</li>
+                        <li>Elementor</li>
+                        <li>LocalWP</li>
+                    </ul>
+                </article> -->
+                <article>
+                    <h3>Calculadora</h3>
+                    <figure>
+                        <a href="https://jsoza1.github.io/calculadora/" target="_blank">
+                        <img class="imagenesConZoom" src="img/calcu3.png" alt="Proyecto">
+                        </a>
+                        <figcaption>Calculadora web basica</figcaption>
+                    </figure>
+                    <b>Tecnologías</b>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>GitHub</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>¿Que se puede comer?</h3>
+                    <figure>
+                        <a href="https://quesepuedecomer.web.app/" target="_blank">
+                        <img class="imagenesConZoom" src="img/quese2.png" alt="Proyecto">
+                        </a>
+                        <figcaption>App Web (Recomendado version mobile)</figcaption>
+                    </figure>
+                    <b>Tecnologías</b>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Firebase</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="sectionClara" id="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <div class="contenedoresDeSecciones">
+                <!-- dl es para una lista de definición -->
+                <dl>
+                    <dt>EasyLife Marketing - 2025</dt>
+                    <dd>Desarrollador web con enfoque en SEO y WordPress</dd>
+                    <ul>
+                        <li>Gestión y optimización de metadatos (títulos, descripciones, etiquetas) para mejorar el SEO y la visibilidad en buscadores, utilizando el plugin Rank Math.</li>
+                        <li>Optimización de carga de sitios web, utilizando y configurando plugins como LiteSpeed Cache.</li>
+                        <li>Uso de SEMrush, Google Search Console para indexación y gestión de sitemaps.</li>
+                        <li>SEO en Imágenes, usando WordPress y Elementor.</li>
+                    </ul>
+                    <br>
+                    <!-- dt es para los encabezados de las listas -->
+                    <dt>Uber - 2024 | Actualidad </dt>
+                    <!-- dd es para el párrafo del encabezado de las listas -->
+                    <dd>Transporte de pasajeros</dd>
+                    <ul>
+                        <li>Utilizando vehículo propio (con licencia profesional).</li>
+                    </ul>
+                    <br>
+                    <dt>Profesor de E.F y Preceptor - 2022 | 2025</dt>
+                    <dd>Trabajo docente en Escuelas publicas de Bs. As.</dd>
+                    <ul>
+                        <li>Metodologías de enseñanza.</li>
+                        <li>Tareas administrativas.</li>
+                    </ul>
+                </dl>
+            </div>
+        </section>
+        <section class="sectionOscura" id="herramientas">
+            <h2>Herramientas</h2>
+            <div class="contenedoresDeSecciones">
+                
+                    <div class="subContenedorLogos">
+                        <p class="tituloLogos">VsCode</p>
+                        <img class="logos" src="img\xvscode.png" alt="logo">
+                    </div>
+                    <div class="subContenedorLogos">
+                        <p class="tituloLogos">GitHub</p>
+                        <img class="logos" src="img/github2.png" alt="logo">
+                    </div>
+                    <div class="subContenedorLogos">
+                        <p class="tituloLogos">Canva</p>
+                        <img class="logos" src="img\canva.png" alt="logo">
+                    </div>
+                    <div class="subContenedorLogos">
+                        <p class="tituloLogos">Gimp</p>
+                        <img class="logos" src="img\xgimp.png" alt="logo">
+                    </div>
+                    <div class="subContenedorLogos">
+                        <p class="tituloLogos">Excel</p>
+                        <img class="logos" src="img\xexcel.png" alt="logo">
+                    </div>
+                    <div class="subContenedorLogos">
+                        <p class="tituloLogos">LocalWP</p>
+                        <img class="logos" src="img/localwp.png" alt="wplocal">
+                    </div>
+            </div>
+        </section>
+        <section class="" id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="contenedorGeneralHabilidades">
+                    <!-- Contenedor principal para todo el componente de habilidades -->
+                    <div class="habilidades-container">
+                        <!-- Wrapper que controla el tamaño responsivo del círculo -->
+                        <div class="habilidades-wrapper">
+                          <!-- El círculo con gradiente, blur y efectos de animación -->
+                          <div class="habilidades-circulo"></div>
+                          <!-- Contenedor para todo el texto que aparece sobre el círculo -->
+                          <div class="contenido-habilidades">
+                                <!-- Título central que aparece en medio del círculo -->
+                                <div class="titulo-central">Habilidades<br>Técnicas</div>
+                                <!-- Contenedor para los elementos de texto distribuidos alrededor -->
+                                <div class="habilidades-items">
+                                    <!-- Los 8 ítems de habilidades posicionados alrededor del círculo -->
+                                    <span class="habilidad-item">Diseño responsive</span> <!-- Posición superior -->
+                                    <span class="habilidad-item">Consumo de APIs</span>    <!-- Posición derecha -->
+                                    <span class="habilidad-item">Control de versiones</span>  <!-- Posición inferior -->
+                                    <span class="habilidad-item">Vibe Coding</span>        <!-- Posición izquierda -->
+                                    <span class="habilidad-item">Deploy</span>        <!-- Diagonal superior derecha-->
+                                    <span class="habilidad-item">UX/UI</span>         <!-- Diagonal inferior derecha -->
+                                    <span class="habilidad-item">WordPress</span>     <!-- Diagonal inferior izquierda -->
+                                    <span class="habilidad-item">SEO</span>          <!-- Diagonal superior izquierda -->
+                                </div>
+                          </div>
+                        </div>
+                    </div>  
+                    <!-- Contenedor principal para todo el componente de habilidades -->
+                    <div class="habilidades-container">
+                        <!-- Wrapper que controla el tamaño responsivo del círculo -->
+                        <div class="habilidades-wrapper">
+                            <!-- El círculo con gradiente, blur y efectos de animación -->
+                            <div class="habilidades-circulo"></div>
+                            <!-- Contenedor para todo el texto que aparece sobre el círculo -->
+                            <div class="contenido-habilidades">
+                                <!-- Título central que aparece en medio del círculo -->
+                                <div class="titulo-central">Habilidades<br>Blandas</div>
+                                <!-- Contenedor para los elementos de texto distribuidos alrededor -->
+                                <div class="habilidades-items">
+                                    <!-- Los 8 ítems de habilidades posicionados alrededor del círculo -->
+                                    <span class="habilidad-item">Comunicación efectiva</span> <!-- Posición superior -->
+                                    <span class="habilidad-item">Trabajo en equipo</span>    <!-- Posición derecha -->
+                                    <span class="habilidad-item">Resolucion de problemas</span>  <!-- Posición inferior -->
+                                    <span class="habilidad-item">Gestion del tiempo</span>      <!-- Posición izquierda -->
+                                    <span class="habilidad-item">Adaptabilidad</span>    <!-- Diagonal superior derecha -->
+                                    <span class="habilidad-item">Proactividad</span>  <!-- Diagonal inferior derecha -->
+                                    <span class="habilidad-item">Creatividad</span>   <!-- Diagonal inferior izquierda -->
+                                    <span class="habilidad-item">Paciencia</span>  <!-- Diagonal superior izquierda -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+            </div>
+        </section>
+        <section class="sectionOscura" id="certificaciones">
+            <h2>Certificaciones</h2>
+            <div class="contenedoresDeSecciones">
+                <article>
+                    <h3>Front-End for Beginners</h3>
+                    <figure>
+                        <a href="https://www.sololearn.com/certificates/CC-2FT8JG98" target="_blank">
+                        <img src="img/frontC.png" alt="Certificado">
+                        </a>
+                        <figcaption>Curso de Desarrollado web</figcaption>
+                    </figure>
+                    <b>Tecnologías</b>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Angular</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Curso de JavaScript</h3>
+                    <figure>
+                        <a href="https://www.sololearn.com/certificates/CC-PWJ9I7CD" target="_blank">
+                        <img src="img/jsC.png" alt="Certificado">
+                        </a>
+                        <figcaption>Curso basico de JavaScript</figcaption>
+                    </figure>
+                    <b>Tecnologías</b>
+                    <ul>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Curso de TypeScript</h3>
+                    <figure>
+                        <a href="" target="_blank">
+                        <img src="img/tsC.png" alt="Certificado">
+                        </a>
+                        <figcaption>Curso intensivo de TypeScript</figcaption>
+                    </figure>
+                    <b>Tecnologías</b>
+                    <ul>
+                        <li>TypeScript</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <div class="contenedorBolitas">
+            <section id="contacto">
+                    <h2>Contacto</h2>
+                    <div id="contenedorContacto">
+                        <div id="contenedorFormulario">
+                            <form action="https://formspree.io/f/xldjzlrr" method="post">
+                                <div id="contenedorDeInputsA">
+                                    <div class="inputsA">
+                                        <label for="nombre-empresa">Nombre de la Empresa</label>
+                                        <input class="tamañoInput" type="text" id="nombre-empresa" name="nombre-empresa"/>
+                                    </div>
+                                    <div class="inputsA">
+                                        <label for="email">Email</label>
+                                        <input class="tamañoInput" type="email" id="email" name="email"/>
+                                    </div>
+                                </div>
+                                <div id="inputB">
+                                    <label for="mensaje">Mensaje</label>
+                                    <textarea id="mensaje" name="mensaje" cols="4" rows="8"></textarea>
+                                </div>
+                                <div id="contenedorBotonForm">
+                                    <button class="special-button" type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="contenedorEmail"> 
+                            <div class="image-container">
+                                  <img src="img/email01.png" alt="email-en-imagen" class="light-image">
+                                  <img src="img/email02.png" alt="email-en-imagen" class="dark-image">
+                            </div>
+                            <button class="special-button" id="btnCopiar" onclick="copiarTexto()">Copiar</button>
+                        </div>
+                    </div>
+            </section>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+        </div>
+    </main>
+    <footer>
+        <div id="footerSuperior">
+            <div id="textoFooter">
+                <p id="texto2">Aviso importante: Actualmente, este sitio web no cuenta con una versión adaptada para dispositivos móviles por cuestiones de tiempo. Estoy trabajando para mejorar la experiencia lo antes posible, agradezco tu comprensión y paciencia mientras continúo desarrollando el sitio.</p>
+            </div>
+            <div id="seccionesFooter">
+                <p>Sitio</p>
+                <a class="enlaces1" href="#tecnologias">Tecnologias</a>
+                <a class="enlaces1" href="#proyectos">Proyectos</a>
+                <a class="enlaces1" href="#experiencia">Experiencia</a>
+                <a class="enlaces1" href="#herramientas">Herramientas</a>
+                <a class="enlaces1" href="#habilidades">Habilidades</a>
+                <a class="enlaces1" href="#certificaciones">Certificaciones</a>
+                <a class="enlaces1" href="#contacto">Contacto</a>
+            </div>
+            <div id="redesFooter">
+                <a href="https://www.linkedin.com/in/jonathan-soza/" target="_blank">
+                    <img class="redesLogos" src="img\linkedin.png" alt="logito1redes">
+                </a>
+                <a href="https://github.com/JSoza1" target="_blank">
+                    <img class="redesLogos" src="img\githubredondo.png" alt="logito2redes">
+                </a>
+            </div>
+        </div>
+        <div id="footerInferior">
+            <p>Desarrollado por Soza Jonathan</p>
+            <p>Copyright © 2025</p>
+        </div>
+    </footer>
+    </div>
+    <button id="btn-up" title="Ir arriba">&#8593;</button>
+    <script src="changeMode.js"></script>
+    <script src="botonUp.js"></script>
+</body>
+</html>
