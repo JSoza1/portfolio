@@ -39,6 +39,36 @@
   .habilidades-container {
     height: 50vh;
   }
+  .flex-container {
+    height: 100%;
+  }
+  .foto-container {
+    width: 50%;
+  }
+  .saludoBotones-container {
+    width: 50%;
+  }
+  #contenedorContacto {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contenedorFormulario {
+    width: 100%;   
+  }
+  #contenedorDeInputsA {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .inputsA {
+    width: 100%;
+    gap: 10px;
+  }
+  #contenedorEmail {
+    width: 100%;
+  }
+  form {
+    gap: 10px;
+  }
 }
 
 /* Celular mediano (hasta 600px) */
@@ -80,6 +110,36 @@
   .habilidades-container {
     height: 50vh;
   }
+  .flex-container {
+    height: 100%;
+  }
+  .foto-container {
+    width: 50%;
+  }
+  .saludoBotones-container {
+    width: 50%;
+  }
+  #contenedorContacto {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contenedorFormulario {
+    width: 100%;   
+  }
+  #contenedorDeInputsA {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .inputsA {
+    width: 100%;
+    gap: 10px;
+  }
+  #contenedorEmail {
+    width: 100%;
+  }
+  form {
+    gap: 10px;
+  }
 }
 
 /* Celular chico (hasta 375px) */
@@ -120,6 +180,36 @@
   }
   .habilidades-container {
     height: 50vh;
+  }
+  .flex-container {
+    height: 100%;
+  }
+  .foto-container {
+    width: 50%;
+  }
+  .saludoBotones-container {
+    width: 50%;
+  }
+  #contenedorContacto {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contenedorFormulario {
+    width: 100%;   
+  }
+  #contenedorDeInputsA {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .inputsA {
+    width: 100%;
+    gap: 10px;
+  }
+  #contenedorEmail {
+    width: 100%;
+  }
+  form {
+    gap: 10px;
   }
 }
 
