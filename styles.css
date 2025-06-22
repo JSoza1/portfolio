@@ -98,6 +98,29 @@ nav {
     color: rgb(212, 0, 255);
 }
 
+/* Ocultar el checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Estilo del ícono hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px;
+}
+
+/* Estilo del nav en escritorio */
+header nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 /*=========================Fin apartado de Header================*/
 
 /*======================== Apartado Foto =======================*/

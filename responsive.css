@@ -1,0 +1,125 @@
+/* Configuracion de media querys */
+
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+  .menu-icon {
+    display: inline-block;
+    z-index: 1001; /* Asegura que quede encima del nav */
+  }
+  header {
+    position: relative; /* Necesario para posicionar el nav dentro del header */
+  }
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: #f8f8f8;
+    padding: 10px;
+    gap: 15px;
+    /* Solución para evitar deformaciones */
+    position: absolute;
+    top: 100%; /* Justo debajo del header */
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    /* ✅ Corregimos el faltante lateral */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .dark-mode header nav {
+    background: rgb(0, 0, 0);
+  }
+  .menu-toggle:checked + .menu-icon + nav {
+    display: flex;
+  }
+  .contenedorGeneralHabilidades {
+    display: flex;
+    flex-direction: column;
+  }
+  .habilidades-container {
+    height: 50vh;
+  }
+}
+
+/* Celular mediano (hasta 600px) */
+@media (max-width: 600px) {
+ .menu-icon {
+    display: inline-block;
+    z-index: 1001; /* Asegura que quede encima del nav */
+  }
+  header {
+    position: relative; /* Necesario para posicionar el nav dentro del header */
+  }
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: #f8f8f8;
+    padding: 10px;
+    gap: 15px;
+    /* Solución para evitar deformaciones */
+    position: absolute;
+    top: 100%; /* Justo debajo del header */
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    /* ✅ Corregimos el faltante lateral */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .dark-mode header nav {
+    background: rgb(0, 0, 0);
+  }
+  .menu-toggle:checked + .menu-icon + nav {
+    display: flex;
+  }
+  .contenedorGeneralHabilidades {
+    display: flex;
+    flex-direction: column;
+  }
+  .habilidades-container {
+    height: 50vh;
+  }
+}
+
+/* Celular chico (hasta 375px) */
+@media (max-width: 375px) {
+ .menu-icon {
+    display: inline-block;
+    z-index: 1001; /* Asegura que quede encima del nav */
+  }
+  header {
+    position: relative; /* Necesario para posicionar el nav dentro del header */
+  }
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: #f8f8f8;
+    padding: 10px;
+    gap: 15px;
+    /* Solución para evitar deformaciones */
+    position: absolute;
+    top: 100%; /* Justo debajo del header */
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    /* ✅ Corregimos el faltante lateral */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .dark-mode header nav {
+    background: rgb(0, 0, 0);
+  }
+  .menu-toggle:checked + .menu-icon + nav {
+    display: flex;
+  }
+  .contenedorGeneralHabilidades {
+    display: flex;
+    flex-direction: column;
+  }
+  .habilidades-container {
+    height: 50vh;
+  }
+}
+
