@@ -710,6 +710,7 @@ textarea {
 
 #footerSuperior {
     display: flex;
+    justify-content: space-between;
     padding: 20px;
   }
 
@@ -717,11 +718,11 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 45%;
   }
 
 #texto2 {
-    width: 83%;
+    width: 100%;
 }
 
 #seccionesFooter {
@@ -769,7 +770,7 @@ textarea {
 
 #redesFooter {
     display: flex;
-    width: 25%;
+    width: 15%;
     align-items: center;
     justify-content:space-evenly;
   }
@@ -798,4 +799,7 @@ textarea {
     transform: scale(1.1);
   }
 
+.dark-mode #textoFinal {
+    color: white;
+}
 /*============ Fin apartado footer ==============*/

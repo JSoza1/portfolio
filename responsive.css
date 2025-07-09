@@ -140,6 +140,17 @@
   form {
     gap: 10px;
   }
+
+
+#redesFooter {
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    flex-direction: column;
+  }
+
 }
 
 /* Celular chico (hasta 375px) */
