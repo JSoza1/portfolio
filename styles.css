@@ -11,7 +11,6 @@ font-family: Roboto, Arial, Helvetica, sans-serif
     text-align: justify; /* Para justificar el texto */
     margin: 0%; /* Eliminar márgenes si no son necesarios */
     line-height: 1.6; /* Opcional: mejorar la legibilidad del texto */
-    align-items: stretch;
     font-family: Roboto, Arial, Helvetica, sans-serif
   }
 
